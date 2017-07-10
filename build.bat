@@ -121,7 +121,7 @@ echo Downloading latest curl...
 %WGET% "http://curl.haxx.se%url%" -O curl.zip
 
 REM Extract downloaded zip file to tmp_libcurl
-%SEVEN_ZIP% x curl.zip -y -otmp_libcurl | FIND /V "ing  " | FIND /V "Igor Pavlov"
+%SEVEN_ZIP% x curl.zip -y -otmp_libcurl | grep -v "ing  " | grep -v "Igor Pavlov"
 
 cd tmp_libcurl\curl-*\winbuild
 

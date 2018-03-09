@@ -184,10 +184,10 @@ echo Compiling dll-release-x64 version...
 nmake /f Makefile.vc mode=dll VC=%VCVERSION% DEBUG=no GEN_PDB=yes MACHINE=x64
 
 echo Compiling static-debug-x64 version...
-nmake /f Makefile.vc mode=static VC=%VCVERSION% DEBUG=yes MACHINE=x64
+nmake /f Makefile.vc mode=static VC=%VCVERSION% DEBUG=yes MACHINE=x64 RTLIBCFG=static
 
 echo Compiling static-release-x64 version...
-nmake /f Makefile.vc mode=static VC=%VCVERSION% DEBUG=no MACHINE=x64
+nmake /f Makefile.vc mode=static VC=%VCVERSION% DEBUG=no MACHINE=x64 RTLIBCFG=static
 
 REM Copy compiled .*lib, *.pdb, *.dll files folder to third-party\lib\dll-debug folder
 REM cd %ROOT_DIR%\tmp_libcurl\curl-*\builds\libcurl-vc-x86-debug-dll-ipv6-sspi-winssl
